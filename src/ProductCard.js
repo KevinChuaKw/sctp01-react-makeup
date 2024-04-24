@@ -1,4 +1,11 @@
+import { useNavigate} from 'react-router-dom'; 
+import { useContext } from 'react';
+import { ProductContext } from './ProductsContext';
+
 export default function ProductCard(props){
+    const navigate = useNavigate(); 
+    const context=useContext(ProductContext); 
+
     return (
         <div className = "card">
             <div className = "card-body">
@@ -10,6 +17,13 @@ export default function ProductCard(props){
                     <li>Price:{props.product.price}</li>
                     <li>Quantity: {props.product.stock_quantity}</li>
                 </ul>
+                <button className = "btn btn-primary btn-sm" onClick={()=>{
+                    navigate('/edit/' + props.product.product_id)
+                }}>Edit</button>
+
+                <button className = "btn btn-danger btn-sm" onClick={()=>{
+                    context.deleteProduct(props.product.product_id); 
+                }}>Delete</button>   
             </div>
         </div>
     )

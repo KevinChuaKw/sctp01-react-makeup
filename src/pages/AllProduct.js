@@ -5,6 +5,7 @@ import ProductCard from "../ProductCard";
 export default function(){
     const context = useContext(ProductContext)
     const products = context.getProducts(); 
+    console.log(products); 
     return (<div>
             <h1>All Products</h1>
             {

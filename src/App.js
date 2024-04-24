@@ -33,9 +33,9 @@ export default function App() {
       <ProductContextData>
       <Routes>
         <Route path="/" element={<AllProduct />} />
-        <Route path="/edit" element={<EditProduct />} />
+        <Route path="/edit/:id" element={<EditProduct />} />
         <Route path="/create" element={<CreateProduct />} />
-        <Route path="/delete" element={<DeleteProduct />} />
+        <Route path="/delete/:id" element={<DeleteProduct />} />
       </Routes>
       </ProductContextData>
     </Router>
