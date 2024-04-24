@@ -8,7 +8,7 @@ export default function ProductCard(props){
                 </p>
                 <ul>
                     <li>Price:{props.product.price}</li>
-                    <li>Quantity: {props.product.quantity}</li>
+                    <li>Quantity: {props.product.stock_quantity}</li>
                 </ul>
             </div>
         </div>
